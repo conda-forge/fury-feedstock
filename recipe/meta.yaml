@@ -1,5 +1,5 @@
 {% set name = "fury" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 236d921787c9ccc312e538248d35b711f663049fd5b673419861da86812dc70f
+  sha256: c4d7d68f7aed63f199f24c18e4089fd2c89681aad99f256db4d5b0a0b0a19885
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Free Unified Rendering for Python - Scientific Visualization'
+  summary: Free Unified Rendering for Python - Scientific Visualization
   description: |
     Free Unified Rendering for Python (FURY) is a library that offers
     a collection of new widgets, functionnality to vtk. It works under
