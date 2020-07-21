@@ -5,7 +5,7 @@ Home: http://github.com/fury-gl/fury
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Free Unified Rendering for Python - Scientific Visualization
 
