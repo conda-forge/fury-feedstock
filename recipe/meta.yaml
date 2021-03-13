@@ -1,5 +1,5 @@
 {% set name = "fury" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 06f2102a690d716f900a0c7bf8d0c5075ec4cfe8c071c25e1f671af8ea0e2ead
+  sha256: 2e05bbfe723f3bee89d48f1e2517581205837744785cf4c6efb1aff438cd5444
 
 build:
   noarch: python
