@@ -1,5 +1,5 @@
 {% set name = "fury" %}
-{% set version = "0.8.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3de7374a79d7fe30c963bdf42f078ec66183b3c0de5e8e7762b919761feaa76d
+  sha256: a55eae00a949304156c75fe26b6e0130c5d7b172593ea626399b8b9eda5c78c7
 
 build:
   noarch: python
@@ -15,12 +15,18 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
     - pip
+    - hatchling
+    - hatch-vcs
+    - setuptools_scm
 
   run:
-    - python
+    - python >=3.8
     - numpy
     - scipy
     - vtk
