@@ -32,6 +32,11 @@ requirements:
     - vtk
     - matplotlib-base
     - six
+    - pillow
+    - packaging
+    - pygltflib
+    - aiohttp
+    - lazy_loader
 
 test:
   imports:
