@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -19,14 +19,14 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
     - setuptools_scm
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - scipy
     - vtk
@@ -39,6 +39,8 @@ requirements:
     - lazy_loader
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fury
 
