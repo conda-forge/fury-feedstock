@@ -3,7 +3,7 @@ About fury-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fury-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/fury-gl/fury
+Home: https://github.com/fury-gl/fury
 
 Package license: BSD-3-Clause
 
@@ -11,11 +11,12 @@ Summary: Free Unified Rendering for Python - Scientific Visualization
 
 Development: https://github.com/fury-gl/fury
 
-Documentation: http://fury.gl/
+Documentation: https://fury.gl/
 
-Free Unified Rendering for Python (FURY) is a library that offers
-a collection of new widgets, functionnality to vtk. It works under
-Python 2.7 and Python 3.4+
+FURY (Free Unified Rendering in pYthon) is a free and open-source software
+library for Scientific Visualization and 3D animations. Built on top of
+pygfx and WebGPU, it provides primitives, actors, UI widgets and shaders
+for building interactive scientific visualizations.
 
 
 Current build status
@@ -154,5 +155,6 @@ Feedstock Maintainers
 =====================
 
 * [@garyfallidis](https://github.com/garyfallidis/)
+* [@maharshi-gor](https://github.com/maharshi-gor/)
 * [@skoudoro](https://github.com/skoudoro/)
 
