@@ -33,9 +33,10 @@ requirements:
     - aiohttp
     # `polyxios >=0.2.0` is an upstream run dependency but is not yet packaged
     # on conda-forge (it is a Cython extension package, so it cannot be built
-    # here as `noarch: python`). It is only imported by `fury.io`, which is
-    # lazily loaded, so the rest of the package is unaffected. Add it back once
-    # a polyxios-feedstock exists.
+    # here as `noarch: python`). It is only imported by `fury.io`, which
+    # `lazy_loader` defers, so `import fury` works; submodules that import
+    # `fury.io` (`window`, `actor`, `ui`, `convert`, `data`) need it installed
+    # separately. Add it back once a polyxios-feedstock exists.
 
 test:
   requires:
