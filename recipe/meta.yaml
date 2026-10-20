@@ -31,18 +31,20 @@ requirements:
     - pygfx >=0.16.0
     - pyglfw >=2.7.0
     - aiohttp
-    # `polyxios >=0.2.0` is an upstream run dependency but is not yet packaged
-    # on conda-forge (it is a Cython extension package, so it cannot be built
-    # here as `noarch: python`). It is only imported by `fury.io`, which
-    # `lazy_loader` defers, so `import fury` works; submodules that import
-    # `fury.io` (`window`, `actor`, `ui`, `convert`, `data`) need it installed
-    # separately. Add it back once a polyxios-feedstock exists.
+    - polyxios >=0.2.0
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - fury
+    - fury.actor
+    - fury.io
+    - fury.ui
+    - fury.window
+  commands:
+    - pip check
 
 about:
   home: https://github.com/fury-gl/fury
