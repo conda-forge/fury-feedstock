@@ -1,13 +1,13 @@
 {% set name = "fury" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 35891b750219719a7a01b77b0e0ade424d64513fee96f4efc54297aca6d002ef
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: fc31091ba32f9877d1a3937e602a760d8b9ce0437ddb2ebe8aa777ccd2f301d5
 
 build:
   noarch: python
